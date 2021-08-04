@@ -47,10 +47,10 @@ mod r#struct;
 mod r#trait;
 mod r#type;
 
-
 pub use associated_type::*;
 pub use block::*;
 pub use field::*;
+pub use fields::Fields;
 pub use formatter::*;
 pub use function::*;
 pub use import::*;
