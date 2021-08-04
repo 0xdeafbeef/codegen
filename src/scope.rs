@@ -233,6 +233,14 @@ impl Scope {
         ret
     }
 
+    /// Return all scope items filtered with `F`
+    pub fn get_items<F>(&self, filter: F) -> impl std::iter::Iterator<Item = &Item>
+    where
+        F: FnMut(&&Item) -> bool,
+    {
+        self.items.iter().filter(filter)
+    }
+
     /// Formats the scope using the given formatter.
     pub fn fmt(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         self.fmt_imports(fmt)?;

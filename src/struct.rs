@@ -36,6 +36,11 @@ impl Struct {
         self
     }
 
+    /// Get fields
+    pub fn fields(&self) -> &Fields {
+        &self.fields
+    }
+
     /// Add a generic to the struct.
     pub fn generic(&mut self, name: &str) -> &mut Self {
         self.type_def.ty.generic(name);
