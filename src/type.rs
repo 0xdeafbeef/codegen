@@ -18,6 +18,11 @@ impl Type {
         }
     }
 
+    /// Get type name
+    pub fn name(&self) -> &str {
+        &self.name
+    }
+
     /// Add a generic to the type.
     pub fn generic<T>(&mut self, ty: T) -> &mut Self
     where
